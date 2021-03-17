@@ -17,7 +17,7 @@ export function activate (context: vscode.ExtensionContext) {
         const text = document.getText();
 
         // parse words
-        const words = text.split(/[\s,'"`:!&]+/);
+        const words = text.split(/[\n\r\s,'"`:!&]+/);
 
         words.forEach((word: string) => {
           // add completion for each word
